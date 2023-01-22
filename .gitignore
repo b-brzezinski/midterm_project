@@ -1,0 +1,12 @@
+data/Fossil/datapackage.json
+data/Fossil/README.md
+data/Fossil/archive/fossil-fuel-co2-emissions-by-nation.csv
+data/Fossil/data/fossil-fuel-co2-emissions-by-nation_csv.csv
+data/Fossil/data/fossil-fuel-co2-emissions-by-nation_json.json
+data/Fossil/data/validation_report.json
+data/GDP/API_NY.GDP.MKTP.CD_DS2_en_csv_v2_4751562.csv
+data/GDP/Metadata_Country_API_NY.GDP.MKTP.CD_DS2_en_csv_v2_4751562.csv
+data/GDP/Metadata_Indicator_API_NY.GDP.MKTP.CD_DS2_en_csv_v2_4751562.csv
+data/population/API_SP.POP.TOTL_DS2_en_csv_v2_4751604.csv
+data/population/Metadata_Country_API_SP.POP.TOTL_DS2_en_csv_v2_4751604.csv
+data/population/Metadata_Indicator_API_SP.POP.TOTL_DS2_en_csv_v2_4751604.csv
