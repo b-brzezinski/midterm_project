@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 
+class EmptyTimeframe(Exception):
+    pass
+
 def input(gdp_file,pop_file,fos_file):
     gdp_data=pd.read_csv(gdp_file,header=2)
     pop_data=pd.read_csv(pop_file,header=2)
@@ -29,16 +32,22 @@ def join_dataframes(gdp_data,pop_data,fos_data):
     return joined_df
 
 def filtering_data(data,start='nan',finish='nan'):
-    if type(start) == str and type(finish) == str:
+    try:
+        if type(start) == str and type(finish) == str:
+            return data
+        elif type(start) == str:
+            filtered = data[data['Year']<=finish]
+        elif type(finish) == str:
+            filtered = data[data['Year']>=start]
+        else:
+            filtered = data[(data['Year']>=start) & (data['Year']<=finish)]
+        if filtered.empty:
+            raise EmptyTimeframe('Given timeframe is empty.')
+        else:
+            return filtered
+    except EmptyTimeframe:
+        print('given timeframe is empty, working on whole data instead.')
         return data
-    elif type(start) == str:
-        filtered = data[data['Year']<=finish]
-    elif type(finish) == str:
-        filtered = data[data['Year']>=start]
-    else:
-        filtered = data[(data['Year']>=start) & (data['Year']<=finish)]
-    return filtered
-
 
 if __name__ == "__main__":
     gdp_data,pop_data,fos_data=input('data/GDP/API_NY.GDP.MKTP.CD_DS2_en_csv_v2_4751562.csv','data\population\API_SP.POP.TOTL_DS2_en_csv_v2_4751604.csv','data\Fossil\data\\fossil-fuel-co2-emissions-by-nation_csv.csv')
