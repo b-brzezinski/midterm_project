@@ -171,9 +171,3 @@ def filtering_data(data,start=None,finish=None):
     except EmptyTimeframe:
         print('given timeframe is empty, working on whole data instead.')
         return data
-
-#if __name__ == "__main__":
-#    gdp_data,pop_data,fos_data=input_data('data/GDP/API_NY.GDP.MKTP.CD_DS2_en_csv_v2_4751562.csv','data\population\API_SP.POP.TOTL_DS2_en_csv_v2_4751604.csv','data\Fossil\data\\fossil-fuel-co2-emissions-by-nation_csv.csv')
-#    data_joined=join_dataframes(gdp_data,pop_data,fos_data)
-#    data_filtered=filtering_data(data_joined,1990,2000)
-#    data_filtered.to_csv('test.csv')
