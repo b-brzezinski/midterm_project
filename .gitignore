@@ -16,3 +16,11 @@ build/lib/__init__.py
 __pycache__/analysis.cpython-310.pyc
 .gitignore
 __pycache__/io_and_cleaning.cpython-310.pyc
+midterm_project.egg-info/dependency_links.txt
+.gitignore
+midterm_project.egg-info/SOURCES.txt
+midterm_project.egg-info/requires.txt
+.gitignore
+midterm_project.egg-info/top_level.txt
+.gitignore
+midterm_project.egg-info/PKG-INFO
