@@ -11,3 +11,8 @@ data/population/API_SP.POP.TOTL_DS2_en_csv_v2_4751604.csv
 data/population/Metadata_Country_API_SP.POP.TOTL_DS2_en_csv_v2_4751604.csv
 data/population/Metadata_Indicator_API_SP.POP.TOTL_DS2_en_csv_v2_4751604.csv
 test.csv
+.ipynb_checkpoints/main-checkpoint.ipynb
+build/lib/__init__.py
+__pycache__/analysis.cpython-310.pyc
+.gitignore
+__pycache__/io_and_cleaning.cpython-310.pyc
